@@ -9,7 +9,7 @@
 ## Level: FLY
 
 
-## Name: **Ansible + ACI, NX-OS, & UCS **
+## Name: Ansible + ACI, NX-OS, & UCS
 
 **Data Center Ansible Configuration**
 
@@ -23,7 +23,7 @@ Partner Story:  VAR Partner J taught their deployment engineers to use the Ansib
 
 
 
-## **Use Case Playbook**
+## Use Case Playbook
 
 This use case consists of 3 learning labs and a challenge. The 3 learning labs are written in YAML as Ansible playbooks and are located at: **Ansible Configurations**
 
@@ -65,6 +65,8 @@ You may also find it useful to increase the timeout values in the ‘ansible.cfg
 You can then follow the 3 Learning Labs in order to learn how to use Ansible to read and configure either NX-OS, ACI, or UCS (choose one) devices. While the guidelines below are written from the NX-OS lab, the others are similar enough to translate to.
 
 
+
+### Labs
 
 In **Lab1** you will use the check.yml files in each domain to check for the specific configuration status. For example VLANs configured on UCS, NX-OS, or a tenant configured on ACI. Lab 1 should take approximately 30 minutes.
 
