@@ -76,11 +76,7 @@ WebEx Teams -
     5. By scrolling further down, copy the Bearer token (valid for 12 hours) and paste it to env_user.py file (var name - SPARK_ACCESS_TOKEN)
 
 
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Cisco-APO0.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/Cisco-APO0.png "image_tooltip")
+![Webex Token](images/Cisco-APO0.png "image_tooltip")
 
 
 Create Access Profile in IND-
@@ -89,10 +85,7 @@ From the IND web page, go to Operate-->Discovery-->Device Access Profiles-->New 
 **Sample Output - \
 **
 
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Cisco-APO1.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/Cisco-APO1.png "image_tooltip")
+![Sample Output](images/Cisco-APO1.png "image_tooltip")
 
 
 Running the script -
@@ -103,10 +96,7 @@ Running the script -
 **Sample output - \
 **
 
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Cisco-APO2.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/Cisco-APO2.png "image_tooltip")
+![Sample Output](images/Cisco-APO2.png "image_tooltip")
 
 
 Check if the discovery profiles were created by logging into the IND dashboard (https://localhost:8443)-->Operate-->Discovery-->Discovery profiles
@@ -114,20 +104,15 @@ Check if the discovery profiles were created by logging into the IND dashboard (
 **Sample output - \
 **
 
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Cisco-APO3.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![Sample Output](images/Cisco-APO3.png "image_tooltip")
 
-
-![alt_text](images/Cisco-APO3.png "image_tooltip")
  Check the WebEx Teams where you created the room. It should have the same output as you got in command prompt. \
 
 
 **Sample output - \
 **
 
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Cisco-APO4.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/Cisco-APO4.png "image_tooltip")
+![Sample Output](images/Cisco-APO4.png "image_tooltip")
 
 
 Once you complete the Learning labs you will be ready for the challenge.
