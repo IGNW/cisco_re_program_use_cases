@@ -51,7 +51,7 @@ If you plan on modifying the actual toolkit files, you should install the develo
 A tutorial and overview of the acitoolkit object model can be found in the Documentation section at: [http://datacenter.github.io/acitoolkit/](http://datacenter.github.io/acitoolkit/). Each individual toolkit is documented in the [https://github.com/datacenter/acitoolkit/tree/master/docs/source](https://github.com/datacenter/acitoolkit/tree/master/docs/source) folder. (NOTE: We may want to build the current document set and include as a pdf file for the Use Case)
 
 
-# You can also use a Docker container to run the ACI toolkit using the Docker Image built from the ‘Dockerfile’ in the code repository. Run: ‘docker run -it --name acitoolkit dockercisco/acitoolkit’
+You can also use a Docker container to run the ACI toolkit using the Docker Image built from the ‘Dockerfile’ in the code repository. Run: ‘docker run -it --name acitoolkit dockercisco/acitoolkit’
 
 The labs are run against the Cisco DevNet ACI Sandbox. Don’t use the ACI Simulator as it requires a jumpbox, but use the reservable ACI Lab at: [https://devnetsandbox.cisco.com/RM/Diagram/Index/87944d49-5c56-49d2-b208-ae7f9bc8d930?diagramType=Topology](https://devnetsandbox.cisco.com/RM/Diagram/Index/87944d49-5c56-49d2-b208-ae7f9bc8d930?diagramType=Topology)
 
