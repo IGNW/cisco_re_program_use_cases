@@ -1,1 +1,1 @@
-#### Place for IoT USe CAses and Demo Materials
+#### Place for IoT Use Cases and Demo Materials
