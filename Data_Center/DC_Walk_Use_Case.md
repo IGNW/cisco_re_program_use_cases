@@ -84,29 +84,27 @@ This APIC controller and Fabric topology resource is a dedicated instance.Please
 
 You should now be ready to complete the 3 Labs:
 
-	**Lab1** is a script to log on to the APIC and displays all of the Interfaces. We will use the ‘reports’ tool at:  [https://github.com/datacenter/acitoolkit/tree/master/applications/reports](https://github.com/datacenter/acitoolkit/tree/master/applications/reports). This lab should take about 30 minutes. 
-
-	
+**Lab1** is a script to log on to the APIC and displays all of the Interfaces. We will use the ‘reports’ tool at:  [https://github.com/datacenter/acitoolkit/tree/master/applications/reports](https://github.com/datacenter/acitoolkit/tree/master/applications/reports). This lab should take about 30 minutes. 	
 
 We will go to the ‘./acitoolkit/applications/reports’ directory from where you installed the repo. Run the aci-report-logical.py’ program against the sandbox ACI controller. This should return a table of the Tenants and their Descriptions. 
 
 For example: to run a logical report for the ACI Sandbox run: “python aci-report-logical.py -u https://10.10.20.42 -l admin -p Cisco123!”. 
 
-	Also run the “python aci-report-logical.py -h” to call out the various reports such as endpoints, epg’s, contracts, etc…
+Also run the “python aci-report-logical.py -h” to call out the various reports such as endpoints, epg’s, contracts, etc…
 
 You should also run the ‘aci-report-security-audit.py’ and ‘aci-report-switch.py’ programs to see how you can gather that data as well. 
 
-	Then you can run the aciReportGui.py version. This version runs a Flask web server that puts an HTML-based frontend on the program. Launch the program ‘aciReportGui.py’ and then point a web browser to ‘localhost:5000’. NOTE: will be different if in a container and will require the container IP instead of localhost.
+Then you can run the aciReportGui.py version. This version runs a Flask web server that puts an HTML-based frontend on the program. Launch the program ‘aciReportGui.py’ and then point a web browser to ‘localhost:5000’. NOTE: will be different if in a container and will require the container IP instead of localhost.
 
 **Lab 2** implements a set of functions that returns information from the APIC Controller using a cli wrapper. This is done using the cli tool at: [https://github.com/datacenter/acitoolkit/tree/master/applications/cli](https://github.com/datacenter/acitoolkit/tree/master/applications/cli)
 
 This lab should take about 30 minutes. 
 
-	For this lab we will need to run the ‘acitoolkitcli.py’ program in the “./acitoolkit/applications/cli” folder. First run this with the ‘-h’ flag to see the required fields.
+For this lab we will need to run the ‘acitoolkitcli.py’ program in the “./acitoolkit/applications/cli” folder. First run this with the ‘-h’ flag to see the required fields.
 
-	Edit the ‘test_cli.txt’ file to initially limit the number of items returned - perhaps to just show bridgedomain/tenant/app/epg/interface for the first run, and name the file ‘myfirsttest_cli.txt’.
+Edit the ‘test_cli.txt’ file to initially limit the number of items returned - perhaps to just show bridgedomain/tenant/app/epg/interface for the first run, and name the file ‘myfirsttest_cli.txt’.
 
-	Run the test with the command “python acitoolkitclil.py -l admin -p Cisco123! -u https://10.10.20.42 -t myfirsttest_cli.txt” NOTE: The order of the flags seems to be required to be -l -p -u -o -t for this command.
+Run the test with the command “python acitoolkitclil.py -l admin -p Cisco123! -u https://10.10.20.42 -t myfirsttest_cli.txt” NOTE: The order of the flags seems to be required to be -l -p -u -o -t for this command.
 
 Edit the ‘test_cli.txt’ file to try different command sets and discover how easy it is to document the ACI install before and after you make changes. NOTE: the initial ‘test_cli.txt’ file does contain configuration changes and you should experiment with these at your peril!
 
