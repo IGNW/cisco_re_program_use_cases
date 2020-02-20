@@ -17,12 +17,10 @@ _Scenario: Enterprise Account wishes to automate their Data Center networking wi
 
 Customer Story: Customer J has a multi-data center footprint running Cisco ACI, NX-OS, and UCS servers. Today they manually make changes to their components which can lead to errors and configuration convergence. By automating changes using master Ansible playbook scripts in Github, they provide reusable, standardized, and repeatable configuration and can **save multiple outages a year, saving both $100,000 of outage time and keeping customer satisfaction high.**
 
-Partner Story:  VAR Partner J taught their deployment engineers to use the Ansible playbooks and was able to help their customers automate the provisioning of their datacenter changes, reduce configuration errors, and document how the system was deployed, increasing the services revenue on the deal deal through the sale of follow on automation services after the install.**_  _**
+Partner Story:  VAR Partner J taught their deployment engineers to use the Ansible playbooks and was able to help their customers automate the provisioning of their datacenter changes, reduce configuration errors, and document how the system was deployed, increasing the services revenue on the deal deal through the sale of follow on automation services after the install.
 
 **Code Exchange Link:** **Data Center Ansible Configuration **-[ https://developer.cisco.com/codeexchange/github/repo/movinalot/ansible-configurations](https://developer.cisco.com/codeexchange/github/repo/movinalot/ansible-configurations)
 
-
-## 
 
 
 ## **Use Case Playbook**
@@ -31,9 +29,9 @@ This use case consists of 3 learning labs and a challenge. The 3 learning labs a
 
 [ https://github.com/movinalot/ansible-configurations](https://developer.cisco.com/codeexchange/github/repo/movinalot/ansible-configurations). 
 
-_You will need to install Ansible (Version 2.7.10 was used when developing this repository and it’s dependency of Python3 with all the Python dependencies in the ‘requirements.txt’ file (by running ‘pip install -r requirements.txt’) _
+You will need to install Ansible (Version 2.7.10 was used when developing this repository and it’s dependency of Python3 with all the Python dependencies in the ‘requirements.txt’ file (by running ‘pip install -r requirements.txt’)
 
-**_NOTE: if you run more recent releases of Ansible, some of the commands and the names have changed for the ‘ansible_facts’ fields! _**For example, instead of looking for a vlan list for nxos, you will need to change ‘response.ansible_facts.vlan_list’ to ‘response.ansible_facts.ansible_net__vlan_list’. If in doubt of the naming, you can always create a ‘debug’ task and use a ‘msg:’ to display the entire response and look for the returned variable name. For Ansible 2.9 you should also change your variable from ‘ansible_connection: httpapi’ to ‘ansible_connection: network_cli’. To speed up the queries that Ansible makes, you can also change the “gather_subset: 'all’” to “gather_subset: '!config'”.
+** NOTE: if you run more recent releases of Ansible, some of the commands and the names have changed for the ‘ansible_facts’ fields! **For example, instead of looking for a vlan list for nxos, you will need to change ‘response.ansible_facts.vlan_list’ to ‘response.ansible_facts.ansible_net__vlan_list’. If in doubt of the naming, you can always create a ‘debug’ task and use a ‘msg:’ to display the entire response and look for the returned variable name. For Ansible 2.9 you should also change your variable from ‘ansible_connection: httpapi’ to ‘ansible_connection: network_cli’. To speed up the queries that Ansible makes, you can also change the “gather_subset: 'all’” to “gather_subset: '!config'”.
 
 
 ### Usage
@@ -66,11 +64,16 @@ You may also find it useful to increase the timeout values in the ‘ansible.cfg
 
 You can then follow the 3 Learning Labs in order to learn how to use Ansible to read and configure either NX-OS, ACI, or UCS (choose one) devices. While the guidelines below are written from the NX-OS lab, the others are similar enough to translate to.
 
+
+
 In **Lab1** you will use the check.yml files in each domain to check for the specific configuration status. For example VLANs configured on UCS, NX-OS, or a tenant configured on ACI. Lab 1 should take approximately 30 minutes.
 
 Using the ‘ansible-playbook -i inventory vlan-check.yml --vault-password-file=~/.vault_pass.txt’ command we can see the VLAN id’s that we requested in the ‘app1.yml’ file are available to us to use in configuring a tenant for ACI.
 
 Try changing the VLAN id’s to a range 100-101 and re-running to see if they are available.
+
+
+
 
 In **Lab2** you will use the site.yml files in each domain to add/update/remove the specific configurations in each domain. For example add/update/delete VLANs on UCS, NX-OS, or a tenant on ACI. Lab2 should take approximately 30 minutes.
 
@@ -79,6 +82,9 @@ You will have verified in Lab1 that the VLAN id’s are available for your tenan
 The ‘site.yml’ file will either add VLAN id’s or remove them based on the ‘nxos_state: present’ or ‘nxos_state: absent' variable in the ‘group_vars’ folder ‘nxos.yml’ file.
 
 Try running the code to create the VLAN block at first. Then run the ‘vlan-check’ playbook to make sure they are not available. Then change the variable to ‘nxos_state: absent' and run the ‘site.yml’ playbook again. Finally run the ‘vlan-check’ playbook to make sure they are available again.
+
+
+
 
 In **Lab3** you will enable the Flask-based weblistener to process the payload from a Github push event webhook. Lab3 should take approximately 90 minutes (excluding prerequisites, below). 
 
@@ -110,11 +116,12 @@ Your demo should be to run the ‘check’ file to document the current status a
 Once you have completed the challenge, please host a 2 minute demo of your application running and send the link to {{ [email_addr@cisco.com](mailto:email_addr@cisco.com) }} where your video will be reviewed for credit. We suggest doing a Webex demo and recording it. Share the recording link via the email for review.
 
 
+
+
+
 ## Appendix A
 
 This appendix is a small guide to help you to:
-
-
 
 *   Install Python
 *   Install Ansible
@@ -138,8 +145,6 @@ Test your install by typing ‘**ansible --version**’
 
 If your installation didn’t copy the ‘ansible.cfg’ file to /etc/ansible/ansible.cfg you should complete this step manually. 
 
-
-
 *   sudo mkdir /etc/ansible
 *   cd /etc/ansible
 *   sudo {your_favorite_text_editor} ansible.cfg
@@ -161,8 +166,6 @@ The first is the {pkg_mgr} installer which will install the latest stable versio
 The second is to use pip and install with ‘**pip install --user ansible**’ and to add the underlying transport protocol ‘**pip install --user paramiko**’
 
 If your installation didn’t copy the ‘ansible.cfg’ file to /etc/ansible/ansible.cfg you should complete this step manually. 
-
-
 
 *   sudo mkdir /etc/ansible
 *   cd /etc/ansible
